@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +25,6 @@ Auth::routes();
 
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-  Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
-  Route::post('/category', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
-  Route::get('/category/{category_id}/edit', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
-  Route::put('/category/{category_id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
-  Route::delete('/category/{category_id}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
-  
+  Route::resource('category', CategoryController::class)->except(['create', 'show']);
+  Route::resource('product', ProductController::class);  
 });

@@ -47,8 +47,9 @@ class CategoryController extends Controller
 
   public function destroy($id)
   {
-    $category = Category::withCount(['child'])->find($id);
-    if ($category->child_count == 0) {
+    $category = Category::withCount(['child', 'product'])->find($id);
+    //KEMUDIAN PADA IF STATEMENTNYA KITA CEK JUGA JIKA = 0
+    if ($category->child_count == 0 && $category->product_count == 0) {
         $category->delete();
         return redirect(route('category.index'))->with(['success' => 'Kategori Dihapus!']);
     }
