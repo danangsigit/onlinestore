@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('product.index') }}">
-            <i class="nav-icon icon-drop"></i> Produk
+            <i class="nav-icon icon-layers"></i> Produk
           </a>
         </li>
         <li class="nav-item nav-dropdown">
