@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Ecommerce\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +16,9 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [FrontController::class, 'index'])->name('ecommerce.index');
+Route::get('/product', [FrontController::class, 'product'])->name('ecommerce.product');
 Auth::routes();
-
-
-
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
   Route::resource('category', CategoryController::class)->except(['create', 'show']);
