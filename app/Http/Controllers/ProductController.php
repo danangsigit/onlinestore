@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\Category;
 use File;
+use App\Jobs\ProductJob;
 
 class ProductController extends Controller
 {
@@ -90,5 +91,36 @@ class ProductController extends Controller
     $product = Product::find($id);
     $category = Category::orderBy('name', 'DESC')->get();
     return view('products.edit', compact('product', 'category'));
+  }
+
+  public function update(Request $request, $id)
+  {
+    $this->validate($request, [
+        'name' => 'required|string|max:100',
+        'description' => 'required',
+        'category_id' => 'required|exists:categories,id',
+        'price' => 'required|integer',
+        'weight' => 'required|integer',
+        'image' => 'nullable|image|mimes:png,jpeg,jpg'
+    ]);
+
+    $product = Product::find($id);
+    $filename = $product->image;
+    if ($request->hasFile('image')) {
+      $file = $request->file('image');
+      $filename = time() . Str::slug($request->name) . '.' . $file->getClientOriginalExtension();
+      $file->storeAs('public/products', $filename);
+      File::delete(storage_path('app/public/products/' . $product->image));
+    }
+
+    $product->update([
+        'name' => $request->name,
+        'description' => $request->description,
+        'category_id' => $request->category_id,
+        'price' => $request->price,
+        'weight' => $request->weight,
+        'image' => $filename
+    ]);
+    return redirect(route('product.index'))->with(['success' => 'Data Produk Diperbaharui']);
   }
 }
