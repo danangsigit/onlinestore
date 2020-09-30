@@ -18,6 +18,8 @@ use App\Http\Controllers\Ecommerce\FrontController;
 
 Route::get('/', [FrontController::class, 'index'])->name('ecommerce.index');
 Route::get('/product', [FrontController::class, 'product'])->name('ecommerce.product');
+Route::get('/category/{slug}', [FrontController::class, 'categoryProduct'])->name('ecommerce.category');
+Route::get('/product/{slug}', [FrontController::class, 'show'])->name('ecommerce.show_product');
 Auth::routes();
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

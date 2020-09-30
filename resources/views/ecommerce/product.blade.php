@@ -4,8 +4,7 @@
     <title>Jual Produk Fashion - DW Ecommerce</title>
 @endsection
 
-@section('content')
-  
+@section('content')  
 	<section class="banner_area">
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
@@ -19,9 +18,7 @@
             </div>
         </div>
     </section>
-    
 
-    
     <section class="cat_product_area section_gap">
         <div class="container-fluid">
             <div class="row flex-row-reverse">
@@ -44,28 +41,28 @@
                         </div>
                     </div>
                     <div class="latest_product_inner row">
-                      
-                      	
-                        @forelse ($products as $row)
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{ asset('storage/products/' . $row->image) }}" alt="{{ $row->name }}">
-                                    <div class="p_icon">
-                                        <a href="{{ url('/product/' . $row->slug) }}">
-                                            <i class="lnr lnr-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="{{ url('/product/' . $row->slug) }}">
-                                    <h4>{{ $row->name }}</h4>
-                                </a>
-                                <h5>Rp {{ number_format($row->price) }}</h5>
-                            </div>
-                        </div>
-                        @empty
-                        @endforelse
-                      
+                      @forelse ($products as $row)
+                      <div class="col-lg-3 col-md-3 col-sm-6">
+                          <div class="f_p_item">
+                              <div class="f_p_img">
+                                  <img class="img-fluid" src="{{ asset('storage/products/' . $row->image) }}" alt="{{ $row->name }}">
+                                  <div class="p_icon">
+                                      <a href="{{ url('/product/' . $row->slug) }}">
+                                          <i class="lnr lnr-cart"></i>
+                                      </a>
+                                  </div>
+                              </div>
+                              <a href="{{ url('/product/' . $row->slug) }}">
+                                  <h4>{{ $row->name }}</h4>
+                              </a>
+                              <h5>Rp {{ number_format($row->price) }}</h5>
+                          </div>
+                      </div>
+                      @empty
+                      <div class="col-md-12">
+                        <h3 class="text-center">Tidak ada produk</h3>
+                      </div>
+                      @endforelse                      
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -99,7 +96,6 @@
                     </div>
                 </div>
             </div>
-
           	
             <div class="row">
                 {{ $products->links() }}
