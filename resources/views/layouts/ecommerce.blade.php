@@ -22,7 +22,6 @@
 </head>
 
 <body>
-	<!--================Header Menu Area =================-->
 	<header class="header_area">
 		<div class="top_menu row m0">
 			<div class="container-fluid">
@@ -41,8 +40,7 @@
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="{{ url('/') }}">
+          <a class="navbar-brand logo_h" href="{{ url('/') }}">
 						<img src="{{ asset('assets/head-logo.png') }}" alt="" width="200">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -51,7 +49,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
+          
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<div class="row w-100">
 							<div class="col-lg-7 pr-0">
@@ -80,7 +78,7 @@
 									</li>
 									<hr>
 									<li class="nav-item">
-										<a href="#" class="icons">
+										<a href="{{ route('ecommerce.list_cart') }}" class="icons">
 											<i class="lnr lnr lnr-cart"></i>
 										</a>
 									</li>
@@ -93,11 +91,9 @@
 			</nav>
 		</div>
 	</header>
-	<!--================Header Menu Area =================-->
 
-    @yield('content')
+  @yield('content')
     
-    <!--================ Subscription Area ================-->
 	<section class="subscription-area section_gap">
         <div class="container">
             <div class="row justify-content-center">
@@ -126,9 +122,7 @@
             </div>
         </div>
     </section>
-    <!--================ End Subscription Area ================-->
 
-	<!--================ start footer Area  =================-->
 	<footer class="footer-area section_gap">
 		<div class="container">
 			<div class="row">
@@ -218,7 +212,6 @@
 			</div>
 		</div>
 	</footer>
-	<!--================ End footer Area  =================-->
 
 	<script src="{{ asset('ecommerce/js/jquery-3.2.1.min.js') }}"></script>
 	<script src="{{ asset('ecommerce/js/popper.js') }}"></script>
@@ -235,5 +228,6 @@
 	<script src="{{ asset('ecommerce/vendors/counter-up/jquery.counterup.js') }}"></script>
 	<script src="{{ asset('ecommerce/js/mail-script.js') }}"></script>
 	<script src="{{ asset('ecommerce/js/theme.js') }}"></script>
+  @yield('js')
 </body>
 </html>

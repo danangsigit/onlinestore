@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  protected $guarded = [];
+  
+  public function district()
+  {
+    return $this->belongsTo(District::class);
+  }
 }

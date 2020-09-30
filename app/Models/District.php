@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class District extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  public function city()
+  {
+    return $this->belongsTo(City::class);
+  }
 }
