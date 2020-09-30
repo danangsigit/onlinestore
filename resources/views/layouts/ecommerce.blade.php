@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="{{ asset('assets/img/brand/Frame6.svg') }}" type="image/svg">
     
     @yield('title')
     
@@ -43,7 +43,7 @@
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="{{ url('/') }}">
-						<img src="https://daengweb.id/front/dw-theme/images/logo-head.png" alt="">
+						<img src="{{ asset('assets/head-logo.png') }}" alt="" width="200">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					 aria-expanded="false" aria-label="Toggle navigation">

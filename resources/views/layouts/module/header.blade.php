@@ -3,8 +3,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="{{ asset('assets/img/brand/Frame6.svg') }}" width="80" height="25" alt="Toko Online">
-        <img class="navbar-brand-minimized" src="{{ asset('assets/img/brand/logo.svg') }}" width="30" height="30" alt="CoreUI Logo">
+        <img class="navbar-brand-full" src="{{ asset('assets/head-logo.png') }}" width="125" alt="Toko Online">
+        <img class="navbar-brand-minimized" src="{{ asset('assets/img/brand/Frame6.svg') }}" width="30" height="30" alt="Toko Online">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>

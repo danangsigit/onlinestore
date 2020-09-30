@@ -71,9 +71,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($category as $val)
+                                        @forelse ($category as $index => $val)
                                         <tr>
-                                            <td></td>
+                                            <td> {{ $index + 1 }} </td>
                                             <td><strong>{{ $val->name }}</strong></td>
                                             <td>{{ $val->parent ? $val->parent->name:'-' }}</td>
                                           
