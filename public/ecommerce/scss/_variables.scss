@@ -11,7 +11,7 @@ $dip: #222222;
 $pfont: #777777;
 /*=================== fonts ====================*/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700|Roboto:300,400,500,700');
+@import url('../fonts/poppins/all.css');
 // Mixins
 @mixin transition($property: all,
 $duration: 300ms,

@@ -41,12 +41,12 @@
             box-shadow: none;
             padding: 0px 15px;
             font-size: 13px;
-            font-family: $rob;
+            font-family: $pop;
             font-weight: 300;
             color: #999999;
             @include placeholder {
                 font-size: 13px;
-                font-family: $rob;
+                font-family: $pop;
                 font-weight: 300;
                 color: #999999;
             }
@@ -60,7 +60,7 @@
             line-height: 36px;
             .current {
                 font-size: 13px;
-                font-family: $rob;
+                font-family: $pop;
                 font-weight: 300;
                 color: #999999;
             }
@@ -120,7 +120,7 @@
         background: $baseColor;
         padding: 0px 30px;
         color: #fffdff;
-        font-family: $rob;
+        font-family: $pop;
         font-size: 14px;
         font-weight: 500;
         line-height: 38px;
@@ -183,7 +183,7 @@
         h6 {
             font-size: 16px;
             line-height: 24px;
-            color: $rob;
+            color: $pop;
             font-weight: bold;
             margin-bottom: 0px;
             color: $dip;
@@ -207,7 +207,7 @@
             line-height: 26px;
             color: #999;
             border: 1px solid #eeeeee;
-            font-family: $rob;
+            font-family: $pop;
             border-radius: 0px;
             padding-left: 20px;
             &:focus {
@@ -264,7 +264,7 @@
                     text-align: center;
                     color: $baseColor;
                     padding-bottom: 10px;
-                    font-family: $rob;
+                    font-family: $pop;
                 }
                 p {
                     display: block;
@@ -306,7 +306,7 @@
     h4 {
         color: #fff;
         font-size: 36px;
-        font-family: $rob;
+        font-family: $pop;
         padding-bottom: 70px;
         padding-top: 120px;
     }
@@ -327,11 +327,11 @@
             padding: 0px 15px;
             line-height: 50px;
             font-size: 13px;
-            font-family: $rob;
+            font-family: $pop;
             color: #fff;
             @include placeholder {
                 font-size: 13px;
-                font-family: $rob;
+                font-family: $pop;
                 color: #fff;
                 opacity: .5;
             }
@@ -347,12 +347,12 @@
             box-shadow: none;
             padding: 15px 15px;
             font-size: 13px;
-            font-family: $rob;
+            font-family: $pop;
             color: #fff;
             resize: none;
             @include placeholder {
                 font-size: 13px;
-                font-family: $rob;
+                font-family: $pop;
                 color: #fff;
                 opacity: .5;
             }

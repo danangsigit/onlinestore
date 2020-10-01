@@ -97,7 +97,7 @@
 		padding: 30px 35px 40px 30px;
 		h4{
 			color: $dip;
-			font-family: $rob;
+			font-family: $pop;
 			font-size: 18px;
 			font-weight: 600;
 			margin-bottom: 15px;
@@ -123,7 +123,7 @@
 			line-height: 50px;
 			background: $baseColor;
 			color: #fff;
-			font-family: $rob;
+			font-family: $pop;
 			font-size: 14px;
 			font-weight: 500;
 			& + a{
@@ -270,7 +270,7 @@
     .post_tag{
         padding-bottom: 20px;
         a{
-            font: 300 14px/21px $rob;
+            font: 300 14px/21px $pop;
             color: $dip;
             &:hover{
                 color: $pfont;
@@ -283,7 +283,7 @@
     .blog_meta{
         li{
             a{
-                font: 300 14px/20px $rob;
+                font: 300 14px/20px $pop;
                 color: #777777;
                 vertical-align: middle;
                 padding-bottom: 12px;

@@ -37,7 +37,7 @@ Table of Content:
 /*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700|Roboto:300,400,500,700");
+@import url("../fonts/poppins/all.css");
 .col {
   -ms-flex: 0 0 20%;
   flex: 0 0 20%; }
@@ -55,12 +55,12 @@ Table of Content:
 body {
   line-height: 24px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   color: #777777; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500; }
 
 button:focus {
@@ -134,6 +134,7 @@ a {
   .box_1620 {
     max-width: 1650px;
     margin: auto; } }
+
 /* Main Title Area css
 ============================================================================================ */
 .main_title {
@@ -144,14 +145,14 @@ a {
     .main_title {
       padding: 0px 15px !important; } }
   .main_title h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 36px;
     color: #222222;
     margin-bottom: 12px;
     font-weight: 500; }
   .main_title p {
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     line-height: 24px;
     color: #777777;
@@ -204,8 +205,7 @@ a {
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
-        font: 500 12px/80px "Roboto", sans-serif;
-        text-transform: uppercase;
+        font: 900 14px/80px "Poppins", sans-serif;
         color: #222222;
         padding: 0px;
         display: inline-block; }
@@ -327,7 +327,7 @@ a {
     line-height: 40px;
     color: #777777;
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     margin: 0px;
     text-transform: uppercase; }
@@ -356,7 +356,7 @@ a {
     background: #f9f9ff;
     padding: 0px 19px;
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #777777;
     transition: all 300ms linear 0s;
@@ -373,7 +373,7 @@ a {
     background: #1641ff;
     padding: 0px 19px;
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     color: #fff;
     transition: all 300ms linear 0s;
@@ -389,7 +389,7 @@ a {
     border-radius: 3px;
     line-height: 28px;
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     padding-left: 19px;
     padding-right: 36px;
@@ -438,7 +438,7 @@ a {
       text-align: center; }
       .home_banner_area .banner_inner .banner_content h3 {
         font-size: 60px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 500;
         line-height: 66px;
         margin-bottom: 20px;
@@ -446,7 +446,7 @@ a {
       .home_banner_area .banner_inner .banner_content p {
         font-size: 14px;
         line-height: 24px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: normal;
         color: #ffffff; }
       .home_banner_area .banner_inner .banner_content .white_bg_btn {
@@ -490,7 +490,7 @@ a {
       .blog_banner .banner_inner .blog_b_text h2 {
         font-size: 60px;
         font-weight: 500;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 66px;
         margin-bottom: 15px; }
       .blog_banner .banner_inner .blog_b_text p {
@@ -529,14 +529,14 @@ a {
       .banner_area .banner_inner .banner_content h2 {
         color: #ffffff;
         font-size: 48px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 12px;
         font-weight: 500;
         margin-top: 120px; }
       .banner_area .banner_inner .banner_content .page_link a {
         font-size: 14px;
         color: #ffffff;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-right: 32px;
         position: relative; }
         .banner_area .banner_inner .banner_content .page_link a:before {
@@ -566,6 +566,7 @@ a {
   .l_blog_item .l_blog_text .date a {
     color: #777777;
     font-size: 12px; }
+
 .l_blog_item .l_blog_text h4 {
   font-size: 18px;
   color: #222222;
@@ -575,6 +576,7 @@ a {
   transition: all 300ms linear 0s; }
   .l_blog_item .l_blog_text h4:hover {
     color: #1641ff; }
+
 .l_blog_item .l_blog_text p {
   margin-bottom: 0px;
   padding-top: 20px; }
@@ -627,7 +629,7 @@ a {
     padding: 30px 35px 40px 30px; }
     .causes_item .causes_text h4 {
       color: #222222;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
@@ -648,7 +650,7 @@ a {
     line-height: 50px;
     background: #1641ff;
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 500; }
     .causes_item .causes_bottom a + a {
@@ -750,14 +752,14 @@ a {
   .blog_info .post_tag {
     padding-bottom: 20px; }
     .blog_info .post_tag a {
-      font: 300 14px/21px "Roboto", sans-serif;
+      font: 300 14px/21px "Poppins", sans-serif;
       color: #222222; }
       .blog_info .post_tag a:hover {
         color: #777777; }
       .blog_info .post_tag a.active {
         color: #1641ff; }
   .blog_info .blog_meta li a {
-    font: 300 14px/20px "Roboto", sans-serif;
+    font: 300 14px/20px "Poppins", sans-serif;
     color: #777777;
     vertical-align: middle;
     padding-bottom: 12px;
@@ -1012,10 +1014,12 @@ a {
       transition: all 0.2s linear; }
       .single-post-area .social-links li a:hover {
         color: #222222; }
+
 .single-post-area .blog_details {
   padding-top: 26px; }
   .single-post-area .blog_details p {
     margin-bottom: 10px; }
+
 .single-post-area .quotes {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -1026,13 +1030,16 @@ a {
   line-height: 24px;
   color: #777;
   font-style: italic; }
+
 .single-post-area .arrow {
   position: absolute; }
   .single-post-area .arrow .lnr {
     font-size: 20px;
     font-weight: 600; }
+
 .single-post-area .thumb .overlay-bg {
   background: rgba(0, 0, 0, 0.8); }
+
 .single-post-area .navigation-area {
   border-top: 1px solid #eee;
   padding-top: 30px;
@@ -1076,6 +1083,7 @@ a {
       opacity: 1; }
     .single-post-area .navigation-area .nav-right:hover .thumb img {
       opacity: .5; }
+
 @media (max-width: 991px) {
   .single-post-area .sidebar-widgets {
     padding-bottom: 0px; } }
@@ -1227,29 +1235,30 @@ a {
   box-shadow: none;
   padding: 0px 15px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #999999; }
   .reservation_form .form-group input.placeholder {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #999999; }
   .reservation_form .form-group input:-moz-placeholder {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #999999; }
   .reservation_form .form-group input::-moz-placeholder {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #999999; }
   .reservation_form .form-group input::-webkit-input-placeholder {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #999999; }
+
 .reservation_form .form-group .res_select {
   height: 40px;
   border: 1px solid #eeeeee;
@@ -1259,7 +1268,7 @@ a {
   line-height: 36px; }
   .reservation_form .form-group .res_select .current {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: #999999; }
   .reservation_form .form-group .res_select:after {
@@ -1271,6 +1280,7 @@ a {
     margin-top: -17px;
     font-size: 13px;
     right: 22px; }
+
 .reservation_form .form-group:last-child {
   text-align: center; }
 
@@ -1297,6 +1307,7 @@ a {
   background: #ffffff; }
   .subscription input:focus {
     outline: none; }
+
 .subscription .newsl-btn {
   position: absolute;
   top: 50%;
@@ -1305,7 +1316,7 @@ a {
   background: #1641ff;
   padding: 0px 30px;
   color: #fffdff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 38px;
@@ -1322,6 +1333,7 @@ a {
   @media (max-width: 992px) {
     .subscription .newsl-btn {
       right: 4%; } }
+
 .subscription .info {
   position: absolute;
   top: 60px;
@@ -1355,7 +1367,7 @@ a {
   .contact_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
-    color: "Roboto", sans-serif;
+    color: "Poppins", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #222222; }
@@ -1373,7 +1385,7 @@ a {
     line-height: 26px;
     color: #999;
     border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     border-radius: 0px;
     padding-left: 20px; }
     .contact_form .form-group .form-control:focus {
@@ -1391,6 +1403,7 @@ a {
     resize: none; }
     .contact_form .form-group textarea.form-control {
       height: 140px; }
+
 .contact_form .submit_btn {
   margin-top: 20px;
   cursor: pointer; }
@@ -1424,7 +1437,7 @@ a {
       text-align: center;
       color: #1641ff;
       padding-bottom: 10px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Poppins", sans-serif; }
     .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
@@ -1453,7 +1466,7 @@ a {
 .h_form_inner h4 {
   color: #fff;
   font-size: 36px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   padding-bottom: 70px;
   padding-top: 120px; }
 
@@ -1471,26 +1484,26 @@ a {
     padding: 0px 15px;
     line-height: 50px;
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff; }
     .home_contact_form .form-group input.placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group input:-moz-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group input::-moz-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group input::-webkit-input-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
   .home_contact_form .form-group textarea {
@@ -1504,27 +1517,27 @@ a {
     box-shadow: none;
     padding: 15px 15px;
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #fff;
     resize: none; }
     .home_contact_form .form-group textarea.placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group textarea:-moz-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group textarea::-moz-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
     .home_contact_form .form-group textarea::-webkit-input-placeholder {
       font-size: 13px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #fff;
       opacity: .5; }
   .home_contact_form .form-group .submit_btn {
@@ -1712,6 +1725,7 @@ a {
 @media (max-width: 767.98px) {
   .generic-banner .height {
     height: 400px; } }
+
 .generic-banner .generic-banner-content h2 {
   line-height: 1.2em;
   margin-bottom: 20px; }
@@ -1719,6 +1733,7 @@ a {
 @media (max-width: 991.98px) {
   .generic-banner .generic-banner-content h2 br {
     display: none; } }
+
 .generic-banner .generic-banner-content p {
   text-align: center;
   font-size: 16px; }
@@ -1726,6 +1741,7 @@ a {
 @media (max-width: 991.98px) {
   .generic-banner .generic-banner-content p br {
     display: none; } }
+
 .generic-content h1 {
   font-weight: 600; }
 
@@ -1765,9 +1781,11 @@ a {
 @media (max-width: 767px) {
   .typo-sec {
     margin-bottom: 30px; } }
+
 @media (max-width: 767px) {
   .element-wrap {
     margin-top: 30px; } }
+
 b, sup, sub, u, del {
   color: #f8b600; }
 
@@ -2008,6 +2026,7 @@ h6 {
 @media (max-width: 991px) {
   .progress-table-wrap {
     overflow-x: scroll; } }
+
 .progress-table {
   background: #fff;
   padding: 15px 0px 30px 0px;
@@ -2675,6 +2694,7 @@ h6 {
 @media (max-width: 991px) {
   .left-align-p p {
     margin-top: 20px; } }
+
 .form-select {
   height: 40px;
   width: 100%; }
@@ -2734,7 +2754,7 @@ h6 {
   background: #1641ff;
   padding: 0px 30px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
@@ -2756,7 +2776,7 @@ h6 {
   background: #1641ff;
   padding: 0px 32px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 38px;
@@ -2776,7 +2796,7 @@ h6 {
   background: #1641ff;
   padding: 0px 30px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 38px;
@@ -2797,7 +2817,7 @@ h6 {
   background: #f9f9ff;
   padding: 0px 35px;
   color: #222222;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 34px;
@@ -2902,6 +2922,7 @@ h6 {
 .feature_product_area .main_box {
   position: relative;
   z-index: 10; }
+
 .feature_product_area .cat_page .pagination li a {
   border: 0 !important; }
 
@@ -3022,7 +3043,7 @@ h6 {
   margin-bottom: 13px; }
   .cat_widgets .list li a {
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #222222; }
   .cat_widgets .list li .list {
     margin-top: 10px;
@@ -3035,19 +3056,21 @@ h6 {
   border-bottom: 1px solid #eeeeee; }
   .p_filter_widgets .widgets_inner:last-child {
     border-bottom: 0px; }
+
 .p_filter_widgets h4 {
   color: #222222;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   margin-bottom: 22px;
   margin-top: 10px; }
+
 .p_filter_widgets .list li {
   margin-bottom: 18px; }
   .p_filter_widgets .list li a {
     padding-left: 30px;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     color: #777777;
     position: relative; }
@@ -3076,6 +3099,7 @@ h6 {
     border-color: #1641ff; }
   .p_filter_widgets .list li:last-child {
     margin-bottom: 0px; }
+
 .p_filter_widgets .range_item .ui-slider {
   height: 6px;
   border: none;
@@ -3092,38 +3116,40 @@ h6 {
     box-shadow: none;
     top: -6px;
     cursor: pointer; }
+
 .p_filter_widgets .range_item label {
   display: inline-block;
   font-size: 14px;
   font-weight: normal;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 15px; }
+
 .p_filter_widgets .range_item input {
   display: inline-block;
   border: none;
   width: 100px;
   font-size: 14px;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 9px;
   padding-left: 3px; }
   .p_filter_widgets .range_item input.placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input:-moz-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input::-moz-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input::-webkit-input-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
 
 .product_top_bar {
   background: #f9f9ff;
@@ -3140,14 +3166,14 @@ h6 {
     padding-left: 20px; }
     .product_top_bar .left_dorp .sorting span {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #555555; }
     .product_top_bar .left_dorp .sorting .list {
       width: 100%;
       border-radius: 0px; }
       .product_top_bar .left_dorp .sorting .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #555555; }
     .product_top_bar .left_dorp .sorting:after {
       content: "\f0d7";
@@ -3169,14 +3195,14 @@ h6 {
     margin-left: 10px; }
     .product_top_bar .left_dorp .show span {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #555555; }
     .product_top_bar .left_dorp .show .list {
       width: 100%;
       border-radius: 0px; }
       .product_top_bar .left_dorp .show .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #555555; }
     .product_top_bar .left_dorp .show:after {
       content: "\f0d7";
@@ -3203,7 +3229,7 @@ h6 {
     font-size: 14px;
     color: #222222;
     font-weight: normal;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .cat_page .pagination li.blank a {
     background: transparent;
     color: #cccccc;
@@ -3269,7 +3295,7 @@ h6 {
     margin-bottom: 5px; }
     .s_product_text .list li a {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal;
       color: #555555; }
       .s_product_text .list li a span {
@@ -3314,7 +3340,7 @@ h6 {
   .product_count label {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     padding-right: 10px; }
   .product_count input {
@@ -3398,7 +3424,7 @@ h6 {
       .product_description_area .tab-content .total_rate .rating_list h3 {
         font-size: 18px;
         color: #222222;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin-bottom: 10px; }
       .product_description_area .tab-content .total_rate .rating_list .list li a {
@@ -3417,7 +3443,7 @@ h6 {
         padding-bottom: 14px; }
         .product_description_area .tab-content .table tbody tr td h5 {
           font-size: 14px;
-          font-family: "Roboto", sans-serif;
+          font-family: "Poppins", sans-serif;
           font-weight: normal;
           color: #777777;
           margin-bottom: 0px;
@@ -3440,7 +3466,7 @@ h6 {
         margin-bottom: 0px;
         font-size: 14px;
         color: #222222;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 8px; }
       .review_item .media .media-body i {
         color: #fbd600; }
@@ -3455,7 +3481,7 @@ h6 {
         line-height: 32px;
         border-radius: 16px;
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #222222;
         position: absolute;
         right: 0px;
@@ -3474,9 +3500,11 @@ h6 {
   font-size: 24px;
   color: #222222;
   margin-bottom: 20px; }
+
 .review_box p {
   margin-bottom: 0px;
   display: inline-block; }
+
 .review_box .list {
   display: inline-block;
   padding-left: 10px;
@@ -3486,6 +3514,7 @@ h6 {
     .review_box .list li a {
       display: inline-block;
       color: #fbd600; }
+
 .review_box .contact_form {
   margin-top: 15px; }
 
@@ -3501,9 +3530,10 @@ h6 {
   border-top: 0px;
   font-size: 14px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #777777;
   border-bottom: 0px !important; }
+
 .cart_inner .table tbody tr td {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3522,7 +3552,7 @@ h6 {
   .cart_inner .table tbody tr td h5 {
     font-size: 14px;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 0px; }
   .cart_inner .table tbody tr td .product_count {
     margin-bottom: 0px; }
@@ -3552,6 +3582,7 @@ h6 {
         background: #eeeeee; }
     .cart_inner .table tbody tr td .product_count .reduced {
       bottom: -6px; }
+
 .cart_inner .table tbody tr.bottom_button .gray_btn {
   line-height: 38px;
   background: #f9f9ff;
@@ -3562,8 +3593,10 @@ h6 {
   color: #222222;
   text-transform: uppercase;
   font-weight: 500; }
+
 .cart_inner .table tbody tr.bottom_button td:last-child {
   width: 60px; }
+
 .cart_inner .table tbody tr.bottom_button td .cupon_text {
   margin-left: -446px; }
   .cart_inner .table tbody tr.bottom_button td .cupon_text input {
@@ -3574,7 +3607,7 @@ h6 {
     height: 40px;
     font-size: 14px;
     color: #cccccc;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     margin-right: -3px;
     outline: none;
@@ -3582,22 +3615,22 @@ h6 {
     .cart_inner .table tbody tr.bottom_button td .cupon_text input.placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input:-moz-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input::-moz-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input::-webkit-input-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
   .cart_inner .table tbody tr.bottom_button td .cupon_text .main_btn {
     height: 40px;
@@ -3607,8 +3640,10 @@ h6 {
     margin-right: -3px; }
   .cart_inner .table tbody tr.bottom_button td .cupon_text .gray_btn {
     padding: 0px 40px; }
+
 .cart_inner .table tbody tr.shipping_area td:nth-child(3) {
   vertical-align: top; }
+
 .cart_inner .table tbody tr.shipping_area .shipping_box {
   margin-left: -250px;
   text-align: right; }
@@ -3650,7 +3685,7 @@ h6 {
     font-size: 14px;
     font-weight: normal;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-top: 20px;
     margin-bottom: 20px; }
     .cart_inner .table tbody tr.shipping_area .shipping_box h6 i {
@@ -3678,6 +3713,7 @@ h6 {
     width: 100%;
     padding: 0px 15px;
     margin-bottom: 20px; }
+
 .cart_inner .table tbody tr.out_button_area .checkout_btn_inner {
   margin-left: -388px; }
   .cart_inner .table tbody tr.out_button_area .checkout_btn_inner .main_btn {
@@ -3704,7 +3740,7 @@ h6 {
 .check_title h2 {
   font-size: 14px;
   font-weight: normal;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f9f9ff;
   line-height: 40px;
   padding-left: 30px;
@@ -3717,6 +3753,7 @@ h6 {
   margin-top: 15px;
   padding-left: 30px;
   margin-bottom: 25px; }
+
 .returning_customer .contact_form {
   max-width: 710px;
   margin-left: 15px; }
@@ -3727,27 +3764,27 @@ h6 {
       height: 40px;
       border-radius: 3px;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #777777;
       font-weight: normal; }
       .returning_customer .contact_form .form-group input.placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input:-moz-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input::-moz-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input::-webkit-input-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
     .returning_customer .contact_form .form-group .submit_btn {
@@ -3762,7 +3799,7 @@ h6 {
       display: block;
       margin-top: 20px;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #777777;
       font-weight: normal; }
 
@@ -3816,7 +3853,7 @@ h6 {
   padding: 0px 40px;
   color: #222222;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   border-radius: 3px; }
   .tp_btn:hover {
@@ -3830,6 +3867,7 @@ h6 {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
   margin-bottom: 30px; }
+
 .billing_details .contact_form .form-group {
   margin-bottom: 20px; }
   .billing_details .contact_form .form-group input {
@@ -3856,7 +3894,7 @@ h6 {
       border-radius: 0px; }
       .billing_details .contact_form .form-group .country_select .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: normal; }
   .billing_details .contact_form .form-group .creat_account #f-option2 {
     margin-right: 5px; }
@@ -3965,6 +4003,7 @@ h6 {
   font-size: 18px;
   color: #222222;
   padding-left: 18px; }
+
 .order_d_inner .details_item .list {
   padding-left: 18px; }
   .order_d_inner .details_item .list li {
@@ -3974,7 +4013,7 @@ h6 {
     .order_d_inner .details_item .list li a {
       font-size: 14px;
       color: #222222;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Poppins", sans-serif; }
       .order_d_inner .details_item .list li a span {
         width: 145px;
         display: inline-block;
@@ -3994,7 +4033,7 @@ h6 {
     .order_details_table .table thead tr th {
       border-bottom: 1px solid #ddd;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .order_details_table .table tbody tr td p {
       margin-bottom: 0px; }
@@ -4063,6 +4102,7 @@ h6 {
   border-radius: 0px;
   outline: none;
   box-shadow: none; }
+
 .login_form .form-group .creat_account {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -4070,15 +4110,17 @@ h6 {
   .login_form .form-group .creat_account input {
     height: auto;
     margin-right: 10px; }
+
 .login_form .form-group .submit_btn {
   display: block;
   border-radius: 0px;
   width: 100%;
   text-transform: uppercase; }
+
 .login_form .form-group a {
   font-size: 14px;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 20px;
   display: block; }
 
@@ -4090,6 +4132,7 @@ h6 {
   max-width: 870px;
   color: #222222;
   margin-bottom: 25px; }
+
 .tracking_box_area .tracking_box_inner .tracking_form {
   max-width: 645px; }
   .tracking_box_area .tracking_box_inner .tracking_form .form-group input {
@@ -4101,27 +4144,27 @@ h6 {
     border-radius: 0px;
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input.placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input:-moz-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input::-moz-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input::-webkit-input-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
   .tracking_box_area .tracking_box_inner .tracking_form .form-group:last-child {
     margin-bottom: 0px; }
@@ -4153,7 +4196,7 @@ h6 {
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #222222;
   font-size: 13px;
@@ -4246,7 +4289,7 @@ h6 {
     margin-bottom: 13px; }
   .says_item h5 {
     color: #777777;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 32px; }
@@ -4265,6 +4308,7 @@ h6 {
   margin-bottom: 0px;
   color: #777777;
   max-width: 235px; }
+
 .single-footer-widget ul li a {
   line-height: 25px;
   display: inline-block;
@@ -4273,15 +4317,19 @@ h6 {
   margin-bottom: 13px; }
   .single-footer-widget ul li a:hover {
     color: #1641ff; }
+
 .single-footer-widget .instafeed {
   margin-left: -5px;
   margin-right: -5px; }
   .single-footer-widget .instafeed li {
     margin: 5px; }
+
 .single-footer-widget .subscribe_form {
   padding-top: 25px; }
+
 .single-footer-widget .input-group {
   display: block !important; }
+
 .single-footer-widget input {
   width: 100%;
   border: 1px solid #fff;
@@ -4302,6 +4350,7 @@ h6 {
     color: #999999; }
   .single-footer-widget input:focus {
     outline: none; }
+
 .single-footer-widget .sub-btn {
   background: #1641ff;
   color: #fff;
@@ -4353,6 +4402,7 @@ h6 {
   font-size: 14px;
   color: #777777;
   margin-bottom: 15px; }
+
 .f_social_wd .f_social a {
   font-size: 14px;
   color: #777777;
@@ -4364,5 +4414,3 @@ h6 {
     margin-right: 0px; }
 
 /*---------------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
