@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Ecommerce\FrontController;
+use App\Http\Controllers\Ecommerce\LoginController;
 use App\Http\Controllers\Ecommerce\CartController;
 use App\Http\Controllers\HomeController;
 
@@ -35,4 +36,15 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::resource('product', ProductController::class)->except(['show']);  
   Route::get('/product/bulk', [ProductController::class, 'massUploadForm'])->name('product.bulk');
   Route::post('/product/bulk', [ProductController::class, 'massUpload'])->name('product.saveBulk');
+});
+
+Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
+  Route::get('login', [LoginController::class, 'loginForm'])->name('customer.login');
+  Route::post('login', [LoginController::class, 'login'])->name('customer.post_login');
+  Route::get('verify/{token}', [FrontController::class, 'verifyCustomerRegistration'])->name('customer.verify');
+});
+
+Route::group(['middleware' => 'customer'], function() {
+    Route::get('dashboard', [LoginController::class, 'dashboard'])->name('customer.dashboard');
+    Route::get('logout', [LoginController::class, 'logout'])->name('customer.logout');
 });
