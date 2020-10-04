@@ -30,7 +30,9 @@ Route::post('/cart/update', [CartController::class, 'updateCart'])->name('ecomme
 Route::get('/checkout', [CartController::class, 'checkout'])->name('ecommerce.checkout');
 Route::post('/checkout', [CartController::class, 'processCheckout'])->name('ecommerce.store_checkout');
 Route::get('/checkout/{invoice}', [CartController::class, 'checkoutFinish'])->name('ecommerce.finish_checkout');
+
 Auth::routes();
+
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::get('/home', [HomeController::class, 'index'])->name('home');
   Route::resource('category', CategoryController::class)->except(['create', 'show']);
@@ -46,10 +48,12 @@ Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
 });
 
 Route::group(['middleware' => 'customer'], function() {
-    Route::get('dashboard', [LoginController::class, 'dashboard'])->name('customer.dashboard');
-    Route::get('logout', [LoginController::class, 'logout'])->name('customer.logout');
-    Route::get('orders', [OrderController::class, 'index'])->name('customer.orders');
-    Route::get('orders/{invoice}', [OrderController::class, 'view'])->name('customer.view_order');
-    Route::get('payment', [OrderController::class, 'paymentForm'])->name('customer.paymentForm');
-    Route::post('payment', [OrderController::class, 'storePayment'])->name('customer.savePayment');
+  Route::get('dashboard', [LoginController::class, 'dashboard'])->name('customer.dashboard');
+  Route::get('logout', [LoginController::class, 'logout'])->name('customer.logout');
+  Route::get('orders', [OrderController::class, 'index'])->name('customer.orders');
+  Route::get('orders/{invoice}', [OrderController::class, 'view'])->name('customer.view_order');
+  Route::get('payment', [OrderController::class, 'paymentForm'])->name('customer.paymentForm');
+  Route::post('payment', [OrderController::class, 'storePayment'])->name('customer.savePayment');
+  Route::get('setting', [FrontController::class, 'customerSettingForm'])->name('customer.settingForm');
+  Route::post('setting', [FrontController::class, 'customerUpdateProfile'])->name('customer.setting');
 });
