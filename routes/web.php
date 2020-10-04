@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Ecommerce\FrontController;
 use App\Http\Controllers\Ecommerce\LoginController;
 use App\Http\Controllers\Ecommerce\CartController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Ecommerce\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +48,8 @@ Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
 Route::group(['middleware' => 'customer'], function() {
     Route::get('dashboard', [LoginController::class, 'dashboard'])->name('customer.dashboard');
     Route::get('logout', [LoginController::class, 'logout'])->name('customer.logout');
+    Route::get('orders', [OrderController::class, 'index'])->name('customer.orders');
+    Route::get('orders/{invoice}', [OrderController::class, 'view'])->name('customer.view_order');
+    Route::get('payment', [OrderController::class, 'paymentForm'])->name('customer.paymentForm');
+    Route::post('payment', [OrderController::class, 'storePayment'])->name('customer.savePayment');
 });
