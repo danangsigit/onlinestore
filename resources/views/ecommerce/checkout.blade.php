@@ -37,57 +37,55 @@
             	<!-- REMOVE DULU VALUE ACTION-NYA JIKA INGIN MELIHATNYA DI BROWSER -->
             	<!-- KARENA ROUTE NAME front.store_checkout BELUM DIBUAT -->
               <form class="row contact_form" action="{{ route('ecommerce.store_checkout') }}" method="post" novalidate="novalidate">
-                            @csrf
-                        <div class="col-md-12 form-group p_star">
-                            <label for="">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="first" name="customer_name" required>
-                            
-                            <!-- UNTUK MENAMPILKAN JIKA TERDAPAT ERROR VALIDASI -->
-                            <p class="text-danger">{{ $errors->first('customer_name') }}</p>
-                        </div>
-                        <div class="col-md-6 form-group p_star">
-                            <label for="">No Telp</label>
-                            <input type="text" class="form-control" id="number" name="customer_phone" required>
-                            <p class="text-danger">{{ $errors->first('customer_phone') }}</p>
-                        </div>
-                        <div class="col-md-6 form-group p_star">
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <p class="text-danger">{{ $errors->first('email') }}</p>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <label for="">Alamat Lengkap</label>
-                            <input type="text" class="form-control" id="add1" name="customer_address" required>
-                            <p class="text-danger">{{ $errors->first('customer_address') }}</p>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <label for="">Propinsi</label>
-                            <select class="form-control" name="province_id" id="province_id" required>
-                                <option value="">Pilih Propinsi</option>
-                              	<!-- LOOPING DATA PROVINCE UNTUK DIPILIH OLEH CUSTOMER -->
-                                @foreach ($provinces as $row)
-                                <option value="{{ $row->id }}">{{ $row->name }}</option>
-                                @endforeach
-                            </select>
-                            <p class="text-danger">{{ $errors->first('province_id') }}</p>
-                        </div>
-                
-                  <!-- ADAPUN DATA KOTA DAN KECAMATAN AKAN DI RENDER SETELAH PROVINSI DIPILIH -->
-                        <div class="col-md-12 form-group p_star">
-                            <label for="">Kabupaten / Kota</label>
-                            <select class="form-control" name="city_id" id="city_id" required>
-                                <option value="">Pilih Kabupaten/Kota</option>
-                            </select>
-                            <p class="text-danger">{{ $errors->first('city_id') }}</p>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <label for="">Kecamatan</label>
-                            <select class="form-control" name="district_id" id="district_id" required>
-                                <option value="">Pilih Kecamatan</option>
-                            </select>
-                            <p class="text-danger">{{ $errors->first('district_id') }}</p>
-                        </div>
-                <!-- ADAPUN DATA KOTA DAN KECAMATAN AKAN DI RENDER SETELAH PROVINSI DIPILIH -->
+                @csrf
+                <div class="col-md-12 form-group p_star">
+                    <label for="">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="first" name="customer_name" required>
+                    <p class="text-danger">{{ $errors->first('customer_name') }}</p>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    <label for="">No Telp</label>
+                    <input type="text" class="form-control" id="number" name="customer_phone" required>
+                    <p class="text-danger">{{ $errors->first('customer_phone') }}</p>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ auth()->guard('customer')->user()->email }}" required {{ auth()->guard('customer')->check() ? 'readonly':'' }}>
+                    <p class="text-danger">{{ $errors->first('email') }}</p>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <label for="">Alamat Lengkap</label>
+                    <input type="text" class="form-control" id="add1" name="customer_address" required>
+                    <p class="text-danger">{{ $errors->first('customer_address') }}</p>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <label for="">Propinsi</label>
+                    <select class="form-control" name="province_id" id="province_id" required>
+                        <option value="">Pilih Propinsi</option>
+                        <!-- LOOPING DATA PROVINCE UNTUK DIPILIH OLEH CUSTOMER -->
+                        @foreach ($provinces as $row)
+                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                        @endforeach
+                    </select>
+                    <p class="text-danger">{{ $errors->first('province_id') }}</p>
+                </div>
+        
+          <!-- ADAPUN DATA KOTA DAN KECAMATAN AKAN DI RENDER SETELAH PROVINSI DIPILIH -->
+                <div class="col-md-12 form-group p_star">
+                    <label for="">Kabupaten / Kota</label>
+                    <select class="form-control" name="city_id" id="city_id" required>
+                        <option value="">Pilih Kabupaten/Kota</option>
+                    </select>
+                    <p class="text-danger">{{ $errors->first('city_id') }}</p>
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    <label for="">Kecamatan</label>
+                    <select class="form-control" name="district_id" id="district_id" required>
+                        <option value="">Pilih Kecamatan</option>
+                    </select>
+                    <p class="text-danger">{{ $errors->first('district_id') }}</p>
+                </div>
+        <!-- ADAPUN DATA KOTA DAN KECAMATAN AKAN DI RENDER SETELAH PROVINSI DIPILIH -->
                     
 					</div>
 					<div class="col-lg-4">

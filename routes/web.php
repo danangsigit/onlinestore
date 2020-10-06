@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController as OrderAdminController;
 use App\Http\Controllers\Ecommerce\FrontController;
 use App\Http\Controllers\Ecommerce\LoginController;
 use App\Http\Controllers\Ecommerce\CartController;
@@ -39,6 +40,13 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
   Route::resource('product', ProductController::class)->except(['show']);  
   Route::get('/product/bulk', [ProductController::class, 'massUploadForm'])->name('product.bulk');
   Route::post('/product/bulk', [ProductController::class, 'massUpload'])->name('product.saveBulk');
+  Route::group(['prefix' => 'orders'], function() {
+    Route::get('/', [OrderAdminController::class, 'index'])->name('orders.index');
+    Route::delete('/{id}', [OrderAdminController::class, 'destroy'])->name('orders.destroy');
+    Route::get('/{invoice}', [OrderAdminController::class, 'view'])->name('orders.view');
+    Route::get('/payment/{invoice}', [OrderAdminController::class, 'acceptPayment'])->name('orders.approve_payment');
+    Route::post('/shipping', [OrderAdminController::class, 'shipping'])->name('orders.shipping');
+  });
 });
 
 Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
