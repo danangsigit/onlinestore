@@ -59,4 +59,16 @@ class OrderController extends Controller
     Mail::to($order->customer->email)->send(new OrderMail($order));
     return redirect()->back();
   }
+
+  public function acceptOrder(Request $request)
+  {
+    $order = Order::find($request->order_id);
+    if (!\Gate::forUser(auth()->guard('customer')->user())->allows('order-view', $order)) {
+        return redirect()->back()->with(['error' => 'Bukan Pesanan Kamu']);
+    }
+    
+    $order->update(['status' => 4]);
+    return redirect()->back()->with(['success' => 'Pesanan Dikonfirmasi']);
+  }
+
 }

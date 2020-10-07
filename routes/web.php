@@ -61,6 +61,9 @@ Route::group(['middleware' => 'customer'], function() {
   Route::get('orders', [OrderController::class, 'index'])->name('customer.orders');
   Route::get('orders/{invoice}', [OrderController::class, 'view'])->name('customer.view_order');
   Route::get('orders/pdf/{invoice}', [OrderController::class, 'pdf'])->name('customer.order_pdf');
+  Route::post('orders/accept', [OrderController::class, 'acceptOrder'])->name('customer.order_accept');
+  Route::get('orders/return/{invoice}', [OrderController::class, 'returnForm'])->name('customer.order_return');
+  Route::put('orders/return/{invoice}', [OrderController::class, 'processReturn'])->name('customer.return');
   Route::get('payment', [OrderController::class, 'paymentForm'])->name('customer.paymentForm');
   Route::post('payment', [OrderController::class, 'storePayment'])->name('customer.savePayment');
   Route::get('setting', [FrontController::class, 'customerSettingForm'])->name('customer.settingForm');

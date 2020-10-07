@@ -80,6 +80,21 @@
                                                     <a href="{{ route('orders.view', $row->invoice) }}" class="btn btn-warning btn-sm">Lihat</a>
                                                     <button class="btn btn-danger btn-sm">Hapus</button>
                                                 </form>
+                                                <form action="{{ route('customer.order_accept') }}" 
+                                                  class="form-inline"
+                                                  onsubmit="return confirm('Kamu Yakin?');" method="post">
+                                                  @csrf
+
+                                                  <a href="{{ route('customer.view_order', $row->invoice) }}" class="btn btn-primary btn-sm mr-1">Detail</a>
+                                                  <input type="hidden" name="order_id" value="{{ $row->id }}">
+
+                                                  <!-- KONDISINYA DITAMBAHKAN, JIKA RETURN_COUNT = 0 -->
+                                                  @if ($row->status == 3 && $row->return_count == 0)
+                                                      <button class="btn btn-success btn-sm">Terima</button>
+                                                      <!-- TOMBOL UNTUK MENGARAH KE HALAMAN RETURN -->
+                                                      <a href="{{ route('customer.order_return', $row->invoice) }}" class="btn btn-danger btn-sm mt-1">Return</a>
+                                                  @endif
+                                                </form>
                                             </td>
                                         </tr>
                                         @empty
