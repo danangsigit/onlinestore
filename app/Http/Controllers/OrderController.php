@@ -13,7 +13,8 @@ class OrderController extends Controller
   public function index()
   {
     $orders = Order::with(['customer.district.city.province'])
-      ->orderBy('created_at', 'DESC');
+    ->withCount('return')
+    ->orderBy('created_at', 'DESC');
     if (request()->q != '') {
       $orders = $orders->where(function($q) {
         $q->where('customer_name', 'LIKE', '%' . request()->q . '%')
@@ -29,6 +30,21 @@ class OrderController extends Controller
     return view('orders.index', compact('orders'));
   }
   
+  public function return($invoice)
+  {
+    $order = Order::with(['return', 'customer'])->where('invoice', $invoice)->first();
+    return view('orders.return', compact('order'));
+  }
+  
+  public function approveReturn(Request $request)
+  {
+    $this->validate($request, ['status' => 'required']); //validasi status
+    $order = Order::find($request->order_id); //query berdasarkan order_id
+    $order->return()->update(['status' => $request->status]); //update status yang ada di table order_returns melalui order
+    $order->update(['status' => 4]); //update status yang ada di table orders
+    return redirect()->back();
+  }
+
   public function destroy($id)
   {
     $order = Order::find($id);

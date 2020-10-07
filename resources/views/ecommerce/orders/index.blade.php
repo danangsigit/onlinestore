@@ -62,7 +62,12 @@
                                   <td>{{ $row->customer_name }}</td>
                                   <td>{{ $row->customer_phone }}</td>
                                   <td>{{ number_format($row->subtotal) }}</td>
-                                  <td>{!! $row->status_label !!}</td>
+                                  <td>
+                                      <strong>{{ $row->invoice }}</strong><br>
+                                      @if ($row->return_count == 1)
+                                      <small>Return: {!! $row->return->status_label !!}</small>
+                                      @endif
+                                  </td>
                                   <td>{{ $row->created_at }}</td>
                                   <td>
                                       <form action="{{ route('customer.order_accept') }}" 

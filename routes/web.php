@@ -44,6 +44,8 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::get('/', [OrderAdminController::class, 'index'])->name('orders.index');
     Route::delete('/{id}', [OrderAdminController::class, 'destroy'])->name('orders.destroy');
     Route::get('/{invoice}', [OrderAdminController::class, 'view'])->name('orders.view');
+    Route::get('/return/{invoice}', [OrderAdminController::class, 'return'])->name('orders.return');
+    Route::post('/return', [OrderAdminController::class, 'approveReturn'])->name('orders.approve_return');
     Route::get('/payment/{invoice}', [OrderAdminController::class, 'acceptPayment'])->name('orders.approve_payment');
     Route::post('/shipping', [OrderAdminController::class, 'shipping'])->name('orders.shipping');
   });
