@@ -36,15 +36,22 @@
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
 						<h3>{{ $product->name }}</h3>
-                        <h2>Rp {{ number_format($product->price) }}</h2>
+            <h2>Rp {{ number_format($product->price) }}</h2>
 						<ul class="list">
 							<li>
-								<a class="active" href="#">
-                                    <span>Kategori</span> : {{ $product->category->name }}</a>
+								<a class="active" href="#"><span>Kategori</span> : {{ $product->category->name }}</a>
 							</li>
 						</ul>
 						<p></p>
 						<div class="product_count">
+              <p>
+                @if (auth()->guard('customer')->check())
+                <label>Afiliasi Link</label>
+                <input type="text" 
+                  value="{{ url('/product/ref/' . auth()->guard('customer')->user()->id . '/' . $product->id) }}" 
+                  readonly class="form-control">
+                @endif
+              </p>
 							<label for="qty">Quantity:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
@@ -88,7 +95,7 @@
 										<h5>Berat</h5>
 									</td>
 									<td>
-                                        <h5>{{ $product->weight }} gr</h5>
+                    <h5>{{ $product->weight }} gr</h5>
 									</td>
 								</tr>
 								<tr>

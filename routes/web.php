@@ -76,4 +76,6 @@ Route::group(['middleware' => 'customer'], function() {
   Route::post('payment', [OrderController::class, 'storePayment'])->name('customer.savePayment');
   Route::get('setting', [FrontController::class, 'customerSettingForm'])->name('customer.settingForm');
   Route::post('setting', [FrontController::class, 'customerUpdateProfile'])->name('customer.setting');
+  Route::get('/product/ref/{user}/{product}', [FrontController::class, 'referalProduct'])->name('customer.afiliasi');
+  Route::get('/afiliasi', [FrontController::class, 'listCommission'])->name('customer.affiliate');
 });
