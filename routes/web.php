@@ -49,6 +49,12 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::get('/payment/{invoice}', [OrderAdminController::class, 'acceptPayment'])->name('orders.approve_payment');
     Route::post('/shipping', [OrderAdminController::class, 'shipping'])->name('orders.shipping');
   });
+  Route::group(['prefix' => 'reports'], function() {
+    Route::get('/order', [HomeController::class, 'orderReport'])->name('report.order');
+    Route::get('/order/pdf/{daterange}', [HomeController::class, 'orderReportPdf'])->name('report.order_pdf');
+    Route::get('/return', [HomeController::class, 'returnReport'])->name('report.return');
+    Route::get('/return/pdf/{daterange}', [HomeController::class, 'returnReportPdf'])->name('report.return_pdf');
+  });
 });
 
 Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
