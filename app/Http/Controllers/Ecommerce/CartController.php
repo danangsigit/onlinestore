@@ -19,12 +19,14 @@ use Cookie;
 
 class CartController extends Controller
 {
+
   private function getCarts()
   {
     $carts = json_decode(request()->cookie('dw-carts'), true);
     $carts = $carts != '' ? $carts:[];
     return $carts;
   }
+
   public function addToCart(Request $request)
   {
     $this->validate($request, [
@@ -81,18 +83,6 @@ class CartController extends Controller
         return $q['qty'] * $q['product_price'];
     });
     return view('ecommerce.checkout', compact('provinces', 'carts', 'subtotal'));
-  }
-
-  public function getCity()
-  {
-    $cities = City::where('province_id', request()->province_id)->get();
-    return response()->json(['status' => 'success', 'data' => $cities]);
-  }
-
-  public function getDistrict()
-  {
-    $districts = District::where('city_id', request()->city_id)->get();
-    return response()->json(['status' => 'success', 'data' => $districts]);
   }
 
   public function processCheckout(Request $request)

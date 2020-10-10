@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Ecommerce\CartController;
+use App\Http\Controllers\RajaOngkirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,9 @@ use App\Http\Controllers\Ecommerce\CartController;
 |
 */
 
-Route::get('city', [CartController::class, 'getCity']);
-Route::get('district', [CartController::class, 'getDistrict']);
+Route::get('province', [RajaOngkirController::class, 'getProvince']);
+Route::get('city', [RajaOngkirController::class, 'getCity']);
+Route::get('district', [RajaOngkirController::class, 'getDistrict']);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
